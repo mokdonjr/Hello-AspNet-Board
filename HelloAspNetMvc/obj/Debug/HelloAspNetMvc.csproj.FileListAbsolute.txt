@@ -61,3 +61,7 @@ c:\users\a9017006\documents\visual studio 2012\Projects\HelloAspNetMvc\HelloAspN
 c:\users\a9017006\documents\visual studio 2012\Projects\HelloAspNetMvc\HelloAspNetMvc\obj\Debug\HelloAspNetMvc.csprojResolveAssemblyReference.cache
 c:\users\a9017006\documents\visual studio 2012\Projects\HelloAspNetMvc\HelloAspNetMvc\obj\Debug\HelloAspNetMvc.dll
 c:\users\a9017006\documents\visual studio 2012\Projects\HelloAspNetMvc\HelloAspNetMvc\obj\Debug\HelloAspNetMvc.pdb
+C:\Users\a9017006\Documents\Visual Studio 2012\Projects\HelloAspNetMvc\HelloAspNetMvc\bin\PagedList.dll
+C:\Users\a9017006\Documents\Visual Studio 2012\Projects\HelloAspNetMvc\HelloAspNetMvc\bin\PagedList.Mvc.dll
+C:\Users\a9017006\Documents\Visual Studio 2012\Projects\HelloAspNetMvc\HelloAspNetMvc\bin\PagedList.xml
+C:\Users\a9017006\Documents\Visual Studio 2012\Projects\HelloAspNetMvc\HelloAspNetMvc\bin\PagedList.Mvc.xml

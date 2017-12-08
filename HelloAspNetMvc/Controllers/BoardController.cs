@@ -7,6 +7,9 @@ using System.Web;
 using System.Web.Mvc;
 using HelloAspNetMvc.Models;
 
+// 게시판 페이징 (Nuget 이용)
+using PagedList;
+
 namespace HelloAspNetMvc.Controllers
 {
     public class BoardController : Controller
@@ -16,10 +19,20 @@ namespace HelloAspNetMvc.Controllers
         // Post테이블의 데이터를 조회해 데이터를 포함한 View를 리턴
         // GET: /Board/
 
-        public ActionResult Index() // Action메서드
+        // public ActionResult Index() // Action메서드
+        public ActionResult Index(int? page)
         {
             // return View(db.Posts.ToList()); // View name을 지정하지 않으면 해당 메서드와 같은 이름의 View를 리턴
-            return View(db.Posts.ToList().OrderByDescending(o => o.writeTime)); /// 최근에 작성한 글을 맨 위로
+            
+            // return View(db.Posts.ToList().OrderByDescending(o => o.writeTime)); /// 최근에 작성한 글을 맨 위로
+
+            var posts = db.Posts.ToList().OrderByDescending(o => o.writeTime);
+
+            var pageNumber = page ?? 1; // page가 null이면 1
+
+            ViewBag.OnePageOfPosts = posts.ToPagedList(pageNumber, 5); // 한 페이지당 보여질 게시물 개수. 5
+
+            return View();
         }
 
         //

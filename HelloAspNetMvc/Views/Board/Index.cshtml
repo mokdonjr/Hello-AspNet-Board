@@ -4,6 +4,12 @@
     ViewBag.Title = "Board List";
 }
 
+<!--Page-->
+@using PagedList.Mvc;
+@using PagedList;
+
+<link href="/Content/PagedList.css" rel="stylesheet" type="text/css"/>
+
 <h2>Index</h2>
 
 <p>
@@ -84,3 +90,7 @@
         // ]]
     </script>
 }
+
+<div style="text-align:center">
+    @Html.PagedListPager( (IPagedList)ViewBag.OnePageOfPosts, page => Url.Action("Index", new { page }) )
+</div>
