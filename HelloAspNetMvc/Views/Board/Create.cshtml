@@ -1,0 +1,53 @@
+﻿@model HelloAspNetMvc.Models.Post
+<!--이 View는 Model이 정의되어 있는 Stringly Typed View 이다.-->
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<!--
+    HTML form 태그 요소를 생성해주는 Action 메서드. Html.BeginForm()
+    최종적으로 렌더링 결과는
+    <form action="/Board/Create" method="post">
+    </form>
+-->
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <table class="tbl_basic">
+        <tr>
+            <th style="width:10%;">이름</th>
+            <!--
+                람다식을 이용해 입력요소와 관련된 속성을 쉽게 지정.
+                최종적으로 렌더링 결과는
+                <input type="text" id="name" name="name" value=""/> 
+                
+                또한, 이렇게 만들어진 input데이터들이 POST방식으로 Submit될 시,
+                Action 메서드의 매개변수에 자동으로 전달되며 이를 Model Binding 이라 한다.
+            -->
+            <td>@Html.TextBoxFor(m => m.name)</td>
+        </tr>
+        <tr>
+            <th>제목</th>
+            <td colspan="3">@Html.TextBoxFor(m => m.subject)</td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td colspan="3">@Html.TextAreaFor(m => m.content, new { rows = 10 })</td>
+        </tr>
+    </table>
+    <p>
+        <input type="submit" value="저장"/>
+    </p>
+}
+
+<div>
+    <!--HTML 도우미 메서드로 링크에 출력될 문자열, 링크 클릭시 실행될 Action 이름을 매개변수로 지정-->
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

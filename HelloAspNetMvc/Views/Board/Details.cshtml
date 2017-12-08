@@ -1,0 +1,50 @@
+﻿@model HelloAspNetMvc.Models.Post
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Post</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.subject)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.subject)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.content)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.content)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.writeTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.writeTime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.readCount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.readCount)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.postNo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<HelloAspNetMvc.Models.Post>
+
+@{
+    ViewBag.Title = "Board List";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="tbl_list">
+    <tr>
+        <th style="width:10%">
+            글번호
+        </th>
+        <th style="width:55%">
+            제목
+        </th>
+        <th style="width:10%">
+            글쓴이
+        </th>
+        <th style="width:15%">
+            작성일
+        </th>
+        <th style="width:10%">
+            조회수
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) 
+{
+    <tr>
+        <td>
+            @item.postNo
+        </td>
+        <td style="text-align:left; padding-left:15px;">
+            @item.subject
+        </td>
+        <td>
+            @item.name
+        </td>
+        <td>
+            @item.writeTime.ToShortDateString()
+        </td>
+        <td>
+            @item.readCount
+        </td>
+    </tr>
+}
+
+</table>

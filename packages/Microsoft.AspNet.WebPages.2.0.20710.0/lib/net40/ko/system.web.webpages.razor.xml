@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Web.WebPages.Razor</name>
+  </assembly>
+  <members>
+    <member name="T:System.Web.WebPages.Razor.CompilingPathEventArgs">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.CompilingPathEventArgs.#ctor(System.String,System.Web.WebPages.Razor.WebPageRazorHost)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.CompilingPathEventArgs.Host">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.CompilingPathEventArgs.VirtualPath">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Razor.PreApplicationStartCode">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.PreApplicationStartCode.Start">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Razor.RazorBuildProvider">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.RazorBuildProvider.#ctor">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.RazorBuildProvider.AddVirtualPathDependency(System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.RazorBuildProvider.AssemblyBuilder">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.RazorBuildProvider.CodeCompilerType">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="E:System.Web.WebPages.Razor.RazorBuildProvider.CodeGenerationCompleted">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="E:System.Web.WebPages.Razor.RazorBuildProvider.CodeGenerationStarted">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="E:System.Web.WebPages.Razor.RazorBuildProvider.CompilingPath">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.RazorBuildProvider.CreateHost">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.RazorBuildProvider.GenerateCode(System.Web.Compilation.AssemblyBuilder)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.RazorBuildProvider.GetGeneratedType(System.CodeDom.Compiler.CompilerResults)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.RazorBuildProvider.GetHostFromConfig">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.RazorBuildProvider.InternalOpenReader">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.RazorBuildProvider.OnBeforeCompilePath(System.Web.WebPages.Razor.CompilingPathEventArgs)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.RazorBuildProvider.VirtualPath">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.RazorBuildProvider.VirtualPathDependencies">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Razor.WebCodeRazorHost">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebCodeRazorHost.#ctor(System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebCodeRazorHost.#ctor(System.String,System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebCodeRazorHost.GetClassName(System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebCodeRazorHost.PostProcessGeneratedCode(System.Web.Razor.Generator.CodeGeneratorContext)"></member>
+    <member name="T:System.Web.WebPages.Razor.WebPageRazorHost">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebPageRazorHost.#ctor(System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebPageRazorHost.#ctor(System.String,System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebPageRazorHost.AddGlobalImport(System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.WebPageRazorHost.CodeLanguage">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebPageRazorHost.CreateMarkupParser">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.WebPageRazorHost.DefaultBaseClass">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.WebPageRazorHost.DefaultClassName">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.WebPageRazorHost.DefaultDebugCompilation">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.WebPageRazorHost.DefaultPageBaseClass">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebPageRazorHost.GetClassName(System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebPageRazorHost.GetCodeLanguage">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebPageRazorHost.GetGlobalImports">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.WebPageRazorHost.InstrumentedSourceFilePath">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.WebPageRazorHost.IsSpecialPage">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.WebPageRazorHost.PhysicalPath">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebPageRazorHost.PostProcessGeneratedCode(System.Web.Razor.Generator.CodeGeneratorContext)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebPageRazorHost.RegisterSpecialFile(System.String,System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebPageRazorHost.RegisterSpecialFile(System.String,System.Type)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.WebPageRazorHost.VirtualPath">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Razor.WebRazorHostFactory">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebRazorHostFactory.#ctor">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebRazorHostFactory.ApplyConfigurationToHost(System.Web.WebPages.Razor.Configuration.RazorPagesSection,System.Web.WebPages.Razor.WebPageRazorHost)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebRazorHostFactory.CreateDefaultHost(System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebRazorHostFactory.CreateDefaultHost(System.String,System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebRazorHostFactory.CreateHost(System.String,System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebRazorHostFactory.CreateHostFromConfig(System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebRazorHostFactory.CreateHostFromConfig(System.String,System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebRazorHostFactory.CreateHostFromConfig(System.Web.WebPages.Razor.Configuration.RazorWebSectionGroup,System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.WebRazorHostFactory.CreateHostFromConfig(System.Web.WebPages.Razor.Configuration.RazorWebSectionGroup,System.String,System.String)">
+      <summary>이 형식/멤버는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Razor.Configuration.HostSection">
+      <summary>host 구성 섹션에 대한 구성 시스템 지원을 제공합니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.Configuration.HostSection.#ctor">
+      <summary>
+        <see cref="T:System.Web.WebPages.Razor.Configuration.HostSection" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.Configuration.HostSection.FactoryType">
+      <summary>호스트 팩터리를 가져오거나 설정합니다.</summary>
+      <returns>호스트 팩터리입니다.</returns>
+    </member>
+    <member name="F:System.Web.WebPages.Razor.Configuration.HostSection.SectionName">
+      <summary>Razor 호스트 환경에 대한 구성 섹션의 이름을 나타냅니다.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Razor.Configuration.RazorPagesSection">
+      <summary>pages 구성 섹션에 대한 구성 시스템 지원을 제공합니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.Configuration.RazorPagesSection.#ctor">
+      <summary>
+        <see cref="T:System.Web.WebPages.Razor.Configuration.RazorPagesSection" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.Configuration.RazorPagesSection.Namespaces">
+      <summary>현재 응용 프로그램의 웹 페이지의 페이지에 추가할 네임스페이스의 컬렉션을 가져오거나 설정합니다.</summary>
+      <returns>네임스페이스의 컬렉션입니다.</returns>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.Configuration.RazorPagesSection.PageBaseType">
+      <summary>페이지 기본 형식 클래스의 이름을 가져오거나 설정합니다.</summary>
+      <returns>페이지 기본 형식 클래스의 이름입니다.</returns>
+    </member>
+    <member name="F:System.Web.WebPages.Razor.Configuration.RazorPagesSection.SectionName">
+      <summary>Razor 페이지에 대한 구성 섹션의 이름을 나타냅니다.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Razor.Configuration.RazorWebSectionGroup">
+      <summary>system.web.webPages.razor 구성 섹션에 대한 구성 시스템 지원을 제공합니다.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Razor.Configuration.RazorWebSectionGroup.#ctor">
+      <summary>
+        <see cref="T:System.Web.WebPages.Razor.Configuration.RazorWebSectionGroup" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="F:System.Web.WebPages.Razor.Configuration.RazorWebSectionGroup.GroupName">
+      <summary>Razor 웹 섹션에 대한 구성 섹션의 이름을 나타냅니다. 정적 읽기 전용 문자열 "system.web.webPages.razor"를 포함합니다.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.Configuration.RazorWebSectionGroup.Host">
+      <summary>system.web.webPages.razor 섹션 그룹에 대한 host 값을 가져오거나 설정합니다.</summary>
+      <returns>host 값입니다.</returns>
+    </member>
+    <member name="P:System.Web.WebPages.Razor.Configuration.RazorWebSectionGroup.Pages">
+      <summary>system.web.webPages.razor 섹션에 대한 pages 요소의 값을 가져오거나 설정합니다.</summary>
+      <returns>pages 요소 값입니다.</returns>
+    </member>
+  </members>
+</doc>

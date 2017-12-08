@@ -1,0 +1,36 @@
+﻿@model HelloAspNetMvc.Models.RegisterExternalLoginModel
+@{
+    ViewBag.Title = "등록";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.ProviderDisplayName 계정을 연결하십시오.</h2>
+</hgroup>
+
+@using (Html.BeginForm("ExternalLoginConfirmation", "Account", new { ReturnUrl = ViewBag.ReturnUrl })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>연결 양식</legend>
+        <p>
+            다음으로 인증되었습니다. <strong>@ViewBag.ProviderDisplayName</strong>.
+            이 사이트에 대한 사용자 이름을 아래에 입력하고 확인 단추를 클릭하여 로그인을
+            완료하십시오.
+        </p>
+        <ol>
+            <li class="name">
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </li>
+        </ol>
+        @Html.HiddenFor(m => m.ExternalLoginData)
+        <input type="submit" value="등록" />
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

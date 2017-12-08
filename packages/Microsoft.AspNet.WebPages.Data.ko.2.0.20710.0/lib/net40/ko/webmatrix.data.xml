@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>WebMatrix.Data</name>
+  </assembly>
+  <members>
+    <member name="T:WebMatrix.Data.ConnectionEventArgs">
+      <summary>
+        <see cref="T:WebMatrix.Data.Database" /> 클래스의 <see cref="E:WebMatrix.Data.Database.ConnectionOpened" /> 이벤트에 대한 데이터를 제공합니다.</summary>
+    </member>
+    <member name="M:WebMatrix.Data.ConnectionEventArgs.#ctor(System.Data.Common.DbConnection)">
+      <summary>
+        <see cref="T:WebMatrix.Data.ConnectionEventArgs" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="connection">이벤트와 연관된 연결입니다.</param>
+    </member>
+    <member name="P:WebMatrix.Data.ConnectionEventArgs.Connection">
+      <summary>이벤트와 연관된 연결을 가져옵니다.</summary>
+      <returns>열려 있는 연결입니다.</returns>
+    </member>
+    <member name="T:WebMatrix.Data.Database">
+      <summary>데이터베이스에 저장된 데이터에 액세스하고 이를 관리하는 데 사용되는 메서드와 속성을 제공합니다.</summary>
+    </member>
+    <member name="M:WebMatrix.Data.Database.Close">
+      <summary>열려 있는 데이터베이스를 닫습니다.</summary>
+    </member>
+    <member name="P:WebMatrix.Data.Database.Connection">
+      <summary>데이터베이스에 대한 현재 연결을 가져옵니다.</summary>
+      <returns>연결입니다.</returns>
+    </member>
+    <member name="E:WebMatrix.Data.Database.ConnectionOpened">
+      <summary>
+        <see cref="T:WebMatrix.Data.Database" /> 인스턴스에서 새 데이터베이스 연결을 열 때 발생합니다.</summary>
+    </member>
+    <member name="M:WebMatrix.Data.Database.Dispose">
+      <summary>
+        <see cref="T:WebMatrix.Data.Database" /> 인스턴스에서 사용된 모든 리소스를 해제합니다.</summary>
+    </member>
+    <member name="M:WebMatrix.Data.Database.Dispose(System.Boolean)">
+      <summary>
+        <see cref="T:WebMatrix.Data.Database" /> 인스턴스에서 사용된 관리되지 않은 리소스를 해제하고, 관리된 리소스를 선택적으로 해제합니다.</summary>
+      <param name="disposing">관리된 리소스와 관리되지 않은 리소스를 모두 해제하려면 true이고, 관리되지 않은 리소스만 해제하려면 false입니다.</param>
+    </member>
+    <member name="M:WebMatrix.Data.Database.Execute(System.String,System.Object[])">
+      <summary>쿼리가 아닌 SQL 문을 실행합니다.</summary>
+      <returns>SQL 문의 영향을 받는 레코드 수입니다.</returns>
+      <param name="commandText">실행할 SQL 문입니다.</param>
+      <param name="args">(선택적 요소) SQL 문에 전달할 매개 변수입니다.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="commandText" />가 null이거나 비어 있습니다.</exception>
+    </member>
+    <member name="M:WebMatrix.Data.Database.GetLastInsertId">
+      <summary>가장 최근에 삽입한 행의 ID 열을 반환합니다.</summary>
+      <returns>가장 최근에 삽입한 행의 ID입니다.</returns>
+    </member>
+    <member name="M:WebMatrix.Data.Database.Open(System.String)">
+      <summary>지정된 파일 이름을 사용하거나 명명된 연결 문자열을 사용하여 데이터베이스에 대한 연결을 엽니다.</summary>
+      <returns>데이터베이스 인스턴스입니다.</returns>
+      <param name="name">열려는 데이터베이스와 연관된 이름입니다. <paramref name="name" />은 App_Data 폴더에 있는 .sdf 또는 .mdf 데이터베이스 파일을 지정할 수 있습니다. 단, 파일 이름 확장명은 포함하지 마십시오. 또는 <paramref name="name" />으로 Web.config 파일의 연결 문자열 이름을 지정할 수 있습니다.</param>
+    </member>
+    <member name="M:WebMatrix.Data.Database.OpenConnectionString(System.String)">
+      <summary>지정된 연결 문자열을 사용하여 데이터베이스에 대한 연결을 엽니다.</summary>
+      <returns>데이터베이스 인스턴스입니다.</returns>
+      <param name="connectionString">데이터베이스 연결하는 데 사용되는 정보를 포함하는 연결 문자열입니다.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="connectionString" />이 null이거나 비어 있습니다.</exception>
+    </member>
+    <member name="M:WebMatrix.Data.Database.OpenConnectionString(System.String,System.String)">
+      <summary>연결 문자열과 지정된 공급자를 사용하여 데이터베이스에 대한 연결을 엽니다.</summary>
+      <returns>데이터베이스 인스턴스입니다.</returns>
+      <param name="connectionString">데이터베이스 연결하는 데 사용되는 정보를 포함하는 연결 문자열입니다.</param>
+      <param name="providerName">(선택적 요소) 데이터 소스에 연결하는 데 사용할 .NET Framework 데이터 공급자의 이름입니다.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="connectionString" />이 null이거나 비어 있습니다.</exception>
+    </member>
+    <member name="M:WebMatrix.Data.Database.Query(System.String,System.Object[])">
+      <summary>행 목록을 결과로 반환하는 SQL 쿼리를 실행합니다.</summary>
+      <returns>SQL 쿼리에서 반환된 행입니다.</returns>
+      <param name="commandText">실행할 SQL 쿼리입니다.</param>
+      <param name="parameters">(선택적 요소) SQL 쿼리에 전달할 매개 변수입니다.</param>
+    </member>
+    <member name="M:WebMatrix.Data.Database.QuerySingle(System.String,System.Object[])">
+      <summary>단일 행을 결과로 반환하는 SQL 쿼리를 실행합니다.</summary>
+      <returns>SQL 쿼리에서 반환된 단일 행입니다.</returns>
+      <param name="commandText">실행할 SQL 쿼리입니다.</param>
+      <param name="args">(선택적 요소) SQL 쿼리에 전달할 매개 변수입니다.</param>
+    </member>
+    <member name="M:WebMatrix.Data.Database.QueryValue(System.String,System.Object[])">
+      <summary>단일 스칼라 값을 결과로 반환하는 SQL 쿼리를 실행합니다.</summary>
+      <returns>SQL 쿼리에서 반환된 스칼라 값입니다.</returns>
+      <param name="commandText">실행할 SQL 쿼리입니다.</param>
+      <param name="args">(선택적 요소) SQL 쿼리에 전달할 매개 변수입니다.</param>
+    </member>
+    <member name="T:WebMatrix.Data.DynamicRecord">
+      <summary>DLR(Dynamic Language Runtime)의 사용자 지정 형식 설명자 및 기능을 사용하여 데이터 레코드를 나타냅니다.</summary>
+    </member>
+    <member name="P:WebMatrix.Data.DynamicRecord.Columns">
+      <summary>
+        <see cref="T:WebMatrix.Data.DynamicRecord" /> 인스턴스의 각 열 이름을 포함하는 목록을 반환합니다.</summary>
+      <returns>각 열 이름을 포함하는 목록입니다.</returns>
+    </member>
+    <member name="M:WebMatrix.Data.DynamicRecord.GetDynamicMemberNames">
+      <summary>
+        <see cref="T:WebMatrix.Data.DynamicRecord" /> 인스턴스의 모든 동적 멤버 이름을 포함하는 목록을 반환합니다.</summary>
+      <returns>모든 동적 멤버의 이름을 포함하는 목록입니다.</returns>
+    </member>
+    <member name="P:WebMatrix.Data.DynamicRecord.Item(System.Int32)">
+      <summary>
+        <see cref="T:WebMatrix.Data.DynamicRecord" /> 인스턴스에서 지정된 인덱스를 사용하여 열 값을 반환합니다.</summary>
+      <returns>지정된 열의 값입니다.</returns>
+      <param name="index">반환할 값을 포함하는 열의 인덱스(0부터 시작)입니다.</param>
+    </member>
+    <member name="P:WebMatrix.Data.DynamicRecord.Item(System.String)">
+      <summary>
+        <see cref="T:WebMatrix.Data.DynamicRecord" /> 인스턴스에서 지정된 이름을 사용하여 열 값을 반환합니다.</summary>
+      <returns>지정된 열의 값입니다.</returns>
+      <param name="name">반환할 값을 포함하는 열의 이름입니다. 이름 일치 시 대/소문자는 구분하지 않습니다.</param>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="T:WebMatrix.Data.DynamicRecord" /> 인스턴스는 이름이 지정된 이름과 일치(대/소문자 구분 안 함)하는 열을 포함하지 않습니다.</exception>
+    </member>
+    <member name="M:WebMatrix.Data.DynamicRecord.System#ComponentModel#ICustomTypeDescriptor#GetAttributes">
+      <summary>이 구성 요소의 인스턴스에 대한 사용자 지정 특성 목록을 반환합니다.</summary>
+      <returns>모든 경우에 <see cref="P:System.ComponentModel.AttributeCollection.Empty" />입니다.</returns>
+    </member>
+    <member name="M:WebMatrix.Data.DynamicRecord.System#ComponentModel#ICustomTypeDescriptor#GetClassName">
+      <summary>이 구성 요소의 인스턴스에 대한 클래스 이름을 반환합니다.</summary>
+      <returns>모든 경우에 null입니다.</returns>
+    </member>
+    <member name="M:WebMatrix.Data.DynamicRecord.System#ComponentModel#ICustomTypeDescriptor#GetComponentName">
+      <summary>이 구성 요소의 인스턴스에 대한 이름을 반환합니다.</summary>
+      <returns>모든 경우에 null입니다.</returns>
+    </member>
+    <member name="M:WebMatrix.Data.DynamicRecord.System#ComponentModel#ICustomTypeDescriptor#GetConverter">
+      <summary>이 구성 요소의 인스턴스에 대한 형식 변환기를 반환합니다.</summary>
+      <returns>모든 경우에 null입니다.</returns>
+    </member>
+    <member name="M:WebMatrix.Data.DynamicRecord.System#ComponentModel#ICustomTypeDescriptor#GetDefaultEvent">
+      <summary>이 구성 요소의 인스턴스에 대한 기본 이벤트를 반환합니다.</summary>
+      <returns>모든 경우에 null입니다.</returns>
+    </member>
+    <member name="M:WebMatrix.Data.DynamicRecord.System#ComponentModel#ICustomTypeDescriptor#GetDefaultProperty">
+      <summary>이 구성 요소의 인스턴스에 대한 기본 속성을 반환합니다.</summary>
+      <returns>모든 경우에 null입니다.</returns>
+    </member>
+    <member name="M:WebMatrix.Data.DynamicRecord.System#ComponentModel#ICustomTypeDescriptor#GetEditor(System.Type)">
+      <summary>이 구성 요소의 인스턴스에 대한 지정된 형식의 편집기를 반환합니다.</summary>
+      <returns>모든 경우에 null입니다.</returns>
+      <param name="editorBaseType">이 개체에 대한 편집기입니다. 이 매개 변수의 값은 이 구현에서 무시되어 이 메서드의 결과에 영향을 주지 않습니다.</param>
+    </member>
+    <member name="M:WebMatrix.Data.DynamicRecord.System#ComponentModel#ICustomTypeDescriptor#GetEvents">
+      <summary>이 구성 요소의 인스턴스에 대한 이벤트를 반환합니다.</summary>
+      <returns>모든 경우에 <see cref="P:System.ComponentModel.EventDescriptorCollection.Empty" />입니다.</returns>
+    </member>
+    <member name="M:WebMatrix.Data.DynamicRecord.System#ComponentModel#ICustomTypeDescriptor#GetEvents(System.Attribute[])">
+      <summary>지정된 필터를 사용하여 이 구성 요소의 인스턴스에 대한 이벤트를 반환합니다.</summary>
+      <returns>모든 경우에 <see cref="P:System.ComponentModel.EventDescriptorCollection.Empty" />입니다.</returns>
+      <param name="attributes">필터로 사용되는 배열입니다. 이 매개 변수의 값은 이 구현에서 무시되어 이 메서드의 결과에 영향을 주지 않습니다.</param>
+    </member>
+    <member name="M:WebMatrix.Data.DynamicRecord.System#ComponentModel#ICustomTypeDescriptor#GetProperties">
+      <summary>이 구성 요소의 인스턴스에 대한 속성을 반환합니다.</summary>
+      <returns>이 구성 요소 인스턴스에 대한 속성을 나타내는 컬렉션입니다.</returns>
+    </member>
+    <member name="M:WebMatrix.Data.DynamicRecord.System#ComponentModel#ICustomTypeDescriptor#GetProperties(System.Attribute[])">
+      <summary>지정된 필터를 사용하여 이 구성 요소의 인스턴스에 대한 속성을 반환합니다.</summary>
+      <returns>이 구성 요소 인스턴스에 대한 속성을 나타내는 컬렉션입니다.</returns>
+      <param name="attributes">필터로 사용되는 배열입니다. 이 매개 변수의 값은 이 구현에서 무시되어 이 메서드의 결과에 영향을 주지 않습니다.</param>
+    </member>
+    <member name="M:WebMatrix.Data.DynamicRecord.System#ComponentModel#ICustomTypeDescriptor#GetPropertyOwner(System.ComponentModel.PropertyDescriptor)">
+      <summary>지정된 속성을 포함하는 개체를 반환합니다.</summary>
+      <returns>이 <see cref="T:WebMatrix.Data.DynamicRecord" /> 인스턴스입니다.</returns>
+      <param name="pd">소유자를 가져올 속성입니다.</param>
+    </member>
+    <member name="M:WebMatrix.Data.DynamicRecord.TryGetMember(System.Dynamic.GetMemberBinder,System.Object@)">
+      <summary>지정된 이름을 사용하여 <see cref="T:WebMatrix.Data.DynamicRecord" /> 멤버의 값을 가져옵니다.</summary>
+      <returns>모든 경우에 true입니다.</returns>
+      <param name="binder">get 작업에 대한 정보를 제공합니다.</param>
+      <param name="result">이 메서드가 반환될 때 멤버 값이 포함됩니다. 이 값은 null일 수 있습니다. 이 매개 변수는 초기화되지 않은 상태로 전달됩니다.</param>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="T:WebMatrix.Data.DynamicRecord" /> 인스턴스는 이름이 <paramref name="binder" /> 매개 변수에서 지정된 이름과 일치(대/소문자 구분 안 함)하는 멤버를 포함하지 않습니다.</exception>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Net.Http.WebRequest</name>
+  </assembly>
+  <members>
+    <member name="T:System.Net.Http.RtcRequestFactory">
+      <summary>RTC(Real-Time-Communication) 백그라운드 알림 인프라에서의 사용을 위해 특수 <see cref="T:System.Net.Http.HttpRequestMessage" />를 만드는 데 사용되는 클래스를 나타냅니다.</summary>
+    </member>
+    <member name="M:System.Net.Http.RtcRequestFactory.Create(System.Net.Http.HttpMethod,System.Uri)">
+      <summary>RTC(Real-Time-Communication) 백그라운드 알림 인프라에 사용할 특수 <see cref="T:System.Net.Http.HttpRequestMessage" />를 만듭니다.</summary>
+      <returns>
+        <see cref="T:System.Net.Http.HttpRequestMessage" />를 반환합니다. RTC 백그라운드 알림 인프라에 사용할 HTTP 요청 메시지입니다.</returns>
+      <param name="method">HTTP 메서드입니다.</param>
+      <param name="uri">요청이 전송되는 URI입니다.</param>
+    </member>
+    <member name="T:System.Net.Http.WebRequestHandler">
+      <summary>Windows 스토어 응용 프로그램 또는 다른 환경에서 사용할 수 없는 데스크톱 고유의 기능을 제공합니다. </summary>
+    </member>
+    <member name="M:System.Net.Http.WebRequestHandler.#ctor">
+      <summary>
+        <see cref="T:System.Net.Http.WebRequestHandler" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:System.Net.Http.WebRequestHandler.AllowPipelining">
+      <summary>요청을 인터넷 리소스에 파이프라인할 것인지 여부를 나타내는 값을 가져오거나 설정합니다.</summary>
+      <returns>
+        <see cref="T:System.Boolean" />를 반환합니다. 요청이 파이프라인되면 true이고, 그렇지 않으면 false입니다. 기본값은 true입니다.</returns>
+    </member>
+    <member name="P:System.Net.Http.WebRequestHandler.AuthenticationLevel">
+      <summary>이 요청에 사용되는 인증 및 가장 수준을 나타내는 값을 가져오거나 설정합니다.</summary>
+      <returns>
+        <see cref="T:System.Net.Security.AuthenticationLevel" />를 반환합니다. <see cref="T:System.Net.Security.AuthenticationLevel" /> 값의 비트 조합입니다. 기본값은 <see cref="F:System.Net.Security.AuthenticationLevel.MutualAuthRequested" />입니다.</returns>
+    </member>
+    <member name="P:System.Net.Http.WebRequestHandler.CachePolicy">
+      <summary>이 요청에 대한 캐시 정책을 가져오거나 설정합니다.</summary>
+      <returns>
+        <see cref="T:System.Net.Cache.RequestCachePolicy" />를 반환합니다. 캐시 정책을 정의하는 <see cref="T:System.Net.Cache.RequestCachePolicy" /> 개체입니다. 기본값은 <see cref="P:System.Net.WebRequest.DefaultCachePolicy" />입니다.</returns>
+    </member>
+    <member name="P:System.Net.Http.WebRequestHandler.ClientCertificates">
+      <summary>이 요청과 관련된 보안 인증서의 컬렉션을 가져오거나 설정합니다.</summary>
+      <returns>
+        <see cref="T:System.Security.Cryptography.X509Certificates.X509CertificateCollection" />를 반환합니다. 이 요청과 연결된 보안 인증서의 컬렉션입니다.</returns>
+    </member>
+    <member name="P:System.Net.Http.WebRequestHandler.ContinueTimeout">
+      <summary>응용 프로그램이 데이터를 언로드하기 전에 서버에서 100-continue를 기다리는 시간(밀리초)을 가져오거나 설정합니다.</summary>
+      <returns>
+        <see cref="T:System.TimeSpan" />를 반환합니다. 응용 프로그램이 데이터를 업로드하기 전에 서버에서 100-continue를 기다리는 시간(밀리초)입니다. 기본값은 350밀리초입니다.</returns>
+    </member>
+    <member name="P:System.Net.Http.WebRequestHandler.ImpersonationLevel">
+      <summary>현재 요청에 대한 가장 수준을 가져오거나 설정합니다.</summary>
+      <returns>
+        <see cref="T:System.Security.Principal.TokenImpersonationLevel" />를 반환합니다. 요청의 가장 수준입니다. 기본값은 <see cref="F:System.Security.Principal.TokenImpersonationLevel.Delegation" />입니다.</returns>
+    </member>
+    <member name="P:System.Net.Http.WebRequestHandler.MaxResponseHeadersLength">
+      <summary>응답 헤더의 허용되는 최대 길이를 가져오거나 설정합니다.</summary>
+      <returns>
+        <see cref="T:System.Int32" />를 반환합니다. 응답 헤더의 킬로바이트(1024바이트) 단위 길이입니다.</returns>
+    </member>
+    <member name="P:System.Net.Http.WebRequestHandler.ReadWriteTimeout">
+      <summary>서버에 요청을 쓰거나 서버에서 요청을 읽을 때의 제한 시간을 밀리초 단위로 가져오거나 설정합니다.</summary>
+      <returns>
+        <see cref="T:System.Int32" />를 반환합니다. 쓰기 또는 읽기가 가능한 제한 시간(밀리초)입니다. 기본값은 300,000밀리초(5분)입니다.</returns>
+    </member>
+    <member name="P:System.Net.Http.WebRequestHandler.ServerCertificateValidationCallback">
+      <summary>서버 인증서의 유효성을 검사할 콜백 메서드를 가져오거나 설정합니다.</summary>
+      <returns>서버 인증서의 유효성을 검사할 콜백 메서드인 <see cref="T:System.Net.Security.RemoteCertificateValidationCallback" />을 가져오거나 설정합니다.</returns>
+    </member>
+    <member name="P:System.Net.Http.WebRequestHandler.UnsafeAuthenticatedConnectionSharing">
+      <summary>고속 NTLM 인증 연결 공유가 허용되는지 여부를 나타내는 값을 가져오거나 설정합니다.</summary>
+      <returns>
+        <see cref="T:System.Boolean" />를 반환합니다. 인증된 연결을 열어 두려면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+  </members>
+</doc>

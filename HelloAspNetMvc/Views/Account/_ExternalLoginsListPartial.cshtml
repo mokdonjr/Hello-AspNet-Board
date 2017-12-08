@@ -1,0 +1,25 @@
+﻿@model ICollection<AuthenticationClientData>
+
+@if (Model.Count == 0)
+{
+    <div class="message-info">
+        <p>구성된 외부 인증 서비스가 없습니다. 외부 서비스를 통한 로그인을 지원하도록 이 ASP.NET 응용 프로그램을 설정하는 방법에 대한 자세한 내용은
+        <a href="http://go.microsoft.com/fwlink/?LinkId=252166">이 문서</a>를 참조하십시오.</p>
+    </div>
+}
+else
+{
+    using (Html.BeginForm("ExternalLogin", "Account", new { ReturnUrl = ViewBag.ReturnUrl }))
+    {
+    @Html.AntiForgeryToken()
+    <fieldset id="socialLoginList">
+        <legend>다른 서비스를 사용하여 로그인</legend>
+        <p>
+        @foreach (AuthenticationClientData p in Model)
+        {
+            <button type="submit" name="provider" value="@p.AuthenticationClient.ProviderName" title="@p.DisplayName 계정을 사용하여 로그인">@p.DisplayName</button>
+        }
+        </p>
+    </fieldset>
+    }
+}
