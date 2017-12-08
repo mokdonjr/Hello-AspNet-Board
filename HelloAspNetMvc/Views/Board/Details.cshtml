@@ -5,46 +5,26 @@
 }
 
 <h2>Details</h2>
-
-<fieldset>
-    <legend>Post</legend>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.name)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.name)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.subject)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.subject)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.content)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.content)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.writeTime)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.writeTime)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.readCount)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.readCount)
-    </div>
-</fieldset>
+<table class="tbl_list">
+    <tr>
+        <th style="width:6%">@Model.postNo</th>
+        <th style="width:57%" class="subject align_l">@Model.subject</th>
+        <th style="width:15%">@Model.name</th>
+        <th style="width:12%">@Model.writeTime.ToShortDateString()</th>
+        <th style="width:10%">@Model.readCount</th>
+    </tr>
+    <tr>
+        <td colspan="5" class="cont_text">
+            <pre>@Model.content</pre>
+        </td>
+    </tr>
+</table>
 <p>
+    @using(Html.BeginForm("Delete", "Board", FormMethod.Post)){
+        @Html.AntiForgeryToken()
+        @Html.Hidden("id", Model.postNo)
+        <input type="submit" value="Delete"/>
+    }
     @Html.ActionLink("Edit", "Edit", new { id=Model.postNo }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "index")
 </p>

@@ -7,57 +7,29 @@
 <h2>Edit</h2>
 
 @using (Html.BeginForm()) {
-    @Html.ValidationSummary(true)
+    @Html.AntiForgeryToken() // @Html.ValidationSummary(true)
+    // 추가
+    @Html.HiddenFor(m => m.postNo)
+    @Html.HiddenFor(m => m.readCount)
+    @Html.HiddenFor(m => m.writeTime)
 
-    <fieldset>
-        <legend>Post</legend>
-
-        @Html.HiddenFor(model => model.postNo)
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.name)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.name)
-            @Html.ValidationMessageFor(model => model.name)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.subject)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.subject)
-            @Html.ValidationMessageFor(model => model.subject)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.content)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.content)
-            @Html.ValidationMessageFor(model => model.content)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.writeTime)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.writeTime)
-            @Html.ValidationMessageFor(model => model.writeTime)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.readCount)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.readCount)
-            @Html.ValidationMessageFor(model => model.readCount)
-        </div>
-
-        <p>
-            <input type="submit" value="Save" />
-        </p>
-    </fieldset>
+    <table class="tbl_basic">
+        <tr>
+            <th style="width:10%">이름</th>
+            <td>@Html.TextBoxFor(m => m.name)</td>
+        </tr>
+        <tr>
+            <th>제목</th>
+            <td colspan="3">@Html.TextBoxFor(m => m.subject)</td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td colspan="3">@Html.TextAreaFor(m => m.content, new { rows=10 })</td>
+        </tr>
+    </table>
+    <p>
+        <input type="submit" value="저장"/>
+    </p>
 }
 
 <div>

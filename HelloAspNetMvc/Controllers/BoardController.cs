@@ -18,7 +18,8 @@ namespace HelloAspNetMvc.Controllers
 
         public ActionResult Index() // Action메서드
         {
-            return View(db.Posts.ToList()); // View name을 지정하지 않으면 해당 메서드와 같은 이름의 View를 리턴
+            // return View(db.Posts.ToList()); // View name을 지정하지 않으면 해당 메서드와 같은 이름의 View를 리턴
+            return View(db.Posts.ToList().OrderByDescending(o => o.writeTime)); /// 최근에 작성한 글을 맨 위로
         }
 
         //
@@ -31,6 +32,11 @@ namespace HelloAspNetMvc.Controllers
             {
                 return HttpNotFound();
             }
+
+            // 조회수 +1증가하여 DB 저장하기 추가
+            post.readCount++;
+            db.SaveChanges();
+
             return View(post);
         }
 
@@ -61,7 +67,7 @@ namespace HelloAspNetMvc.Controllers
             return View(post);
         }
 
-        //
+        // 글 번호를 매개변수로 받아 게시물을 찾고 찾은 게시물 Model과 View를 리턴
         // GET: /Board/Edit/5
 
         public ActionResult Edit(int id = 0)
@@ -78,6 +84,7 @@ namespace HelloAspNetMvc.Controllers
         // POST: /Board/Edit/5
 
         [HttpPost]
+        [ValidateAntiForgeryToken] // ?
         public ActionResult Edit(Post post)
         {
             if (ModelState.IsValid)
@@ -92,7 +99,7 @@ namespace HelloAspNetMvc.Controllers
         //
         // GET: /Board/Delete/5
 
-        public ActionResult Delete(int id = 0)
+        /*public ActionResult Delete(int id = 0)
         {
             Post post = db.Posts.Find(id);
             if (post == null)
@@ -100,7 +107,7 @@ namespace HelloAspNetMvc.Controllers
                 return HttpNotFound();
             }
             return View(post);
-        }
+        }*/
 
         //
         // POST: /Board/Delete/5

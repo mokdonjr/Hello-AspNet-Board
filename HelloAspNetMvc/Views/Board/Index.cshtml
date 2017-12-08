@@ -51,3 +51,36 @@
 }
 
 </table>
+
+<!--
+    section scripts는 _Layout.cs 페이지의 RenderSection("scripts", required:false)에
+    최종 렌더링 된다.    
+-->
+@section scripts{ 
+    @*jQuery 자동완성 지원*@
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        // <![CDATA[
+        $(document).ready(function () {
+
+            // 마우스 올리면 표시
+            $('tr').has('td').hover(function () {
+                $(this).css('background', '#f5f5f5');
+            }, function () {
+                $(this).css('background', '#fff');
+            });
+
+            // 목록 선택시 '글번호'에 대해 BoardController가
+            // Details Action 메서드를 호출
+            // 최종적으로 목록 선택시 /Board/Details/글번호로 Requesst
+            $('tr').has('td').on('click', function () {
+                location.href = "/Board/Details/" + $(this).children('td').first().text();
+            });
+
+            // 마우스 커서 변경
+            $('tr').has('td').css('cursor', 'pointer');
+        });
+        // ]]
+    </script>
+}
